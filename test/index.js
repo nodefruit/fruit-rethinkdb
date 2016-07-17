@@ -17,3 +17,11 @@ test('Insert data into an specific table', async t => {
   let result = await adapter.insert(body, table)
   t.deepEqual(result.inserted, 1)
 })
+
+test('Find data into an specific table', async t => {
+  let query = {'user': 'miguhruiz'}
+  let table = 'users'
+
+  let result = await adapter.find(query, table)
+  t.is(typeof result, 'object', 'Result is an object')
+})
