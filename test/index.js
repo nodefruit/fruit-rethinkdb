@@ -35,3 +35,11 @@ test('Get a piece of data into an specific table', async t => {
   let result = await adapter.findOne(id, table)
   t.deepEqual(result.id, id)
 })
+
+test('List all data from an specific table', async t => {
+  let table = 'users'
+
+  let result = await adapter.findAll(table)
+
+  t.is(typeof result, 'object', 'Result is an object')
+})
