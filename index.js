@@ -1,1 +1,2 @@
-module.exports = require('./lib/fruit-rethinkdb.js')
+const m = require('./lib/fruit-rethinkdb.js')
+module.exports = new m
