@@ -1,0 +1,1 @@
+module.exports = "Want to contribut ? get here : https://github.com/nodefruit/fruit-rethinkdb"

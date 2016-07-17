@@ -1,0 +1,19 @@
+{
+  "name": "fruit-rethinkdb",
+  "version": "1.0.0",
+  "description": "RethinkDB Fruit ORM adapter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodefruit/fruit-rethinkdb.git"
+  },
+  "author": "Khalid REHIOUI <Array.prototype@gmail.com> (http://github.com/javascipt)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nodefruit/fruit-rethinkdb/issues"
+  },
+  "homepage": "https://github.com/nodefruit/fruit-rethinkdb#readme"
+}
