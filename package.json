@@ -18,6 +18,7 @@
   "homepage": "https://github.com/nodefruit/fruit-rethinkdb#readme",
   "dependencies": {
     "bluebird": "^3.4.1",
+    "co": "^4.6.0",
     "rethinkdb": "^2.3.2"
   },
   "devDependencies": {
