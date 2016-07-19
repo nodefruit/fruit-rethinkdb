@@ -3,7 +3,7 @@ const test = require('ava')
 const Adapter = require('..')
 const config = require('../config')
 
-const adapter = new Adapter({host: config.db.host, port: config.db.port, db: config.db.db})
+const adapter = new Adapter({host: process.env.HOST, port: process.env.PORT, db: process.env.DB})
 
 test('Connect to the database', async t => {
   let connection = await adapter.connect()
