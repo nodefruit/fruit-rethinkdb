@@ -3,6 +3,8 @@ machine:
     HOST: '127.0.0.1'
     PORT: '28015'
     DB: 'test2'
+  node:
+    version: 6.2.2
 
 dependencies:
   pre:
