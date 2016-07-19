@@ -17,6 +17,10 @@ dependencies:
     - echo "no-http-admin" | sudo tee --append /etc/rethinkdb/instances.d/instance1.conf
     - sudo /etc/init.d/rethinkdb restart
     - sleep 5
+    - sudo npm install -g recli
+    - recli 'r.dbCreate('test2')'
+    - recli 'r.db('test2').tableCreate('users')'
+    - recli 'r.db('test2').tableCreate('users2')'
 test:
   pre:
     - npm install
