@@ -70,3 +70,21 @@ test('Update all data from a table', async t => {
 
   t.is(typeof result.replaced, 'number', 'Result is a number')
 })
+
+test('Delete a piece of data from a table', async t => {
+  let data = await adapter.insert({user: 'miguhruiz'}, 'users')
+  let i = data.generated_keys[0]
+  let tb = 'users'
+
+  let result = await adapter.delete(i, tb)
+  t.is(result.deleted, 1)
+})
+
+test('Delete all data from a table', async t => {
+  let data = await adapter.insert({user: 'miguhruiz'}, 'users2')
+
+  let tb = 'users2'
+
+  let result = await adapter.deleteAll(tb)
+  t.is(typeof result.deleted, 'number', 'Result is a number')
+})
