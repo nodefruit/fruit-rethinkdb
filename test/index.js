@@ -1,7 +1,5 @@
-'use strict'
-const test = require('ava')
-const Adapter = require('..')
-const config = require('../config')
+import test from 'ava'
+import Adapter from '..'
 
 const adapter = new Adapter({host: process.env.HOST, port: process.env.PORT, db: process.env.DB})
 
