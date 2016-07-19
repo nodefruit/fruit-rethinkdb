@@ -15,5 +15,8 @@ dependencies:
     - echo "no-http-admin" | sudo tee --append /etc/rethinkdb/instances.d/instance1.conf
     - sudo /etc/init.d/rethinkdb restart
     - sleep 5
-before_script: npm install
-script: npm test
+test:
+  pre:
+    - npm install
+  override:
+    - npm test
