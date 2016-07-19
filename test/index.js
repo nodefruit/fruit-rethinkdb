@@ -51,3 +51,14 @@ test('Count data in a table', async t => {
 
   t.is(typeof result, 'number', 'Result is a number')
 })
+
+test('Update a piece of data from a table', async t => {
+  let data = await adapter.insert({user: 'miguhruiz'}, 'users')
+  let i = data.generated_keys[0]
+  let tb = 'users'
+  let b = {user: 'fruitworld'}
+
+  let result = await adapter.update(i, tb, b)
+
+  t.is(result.replaced, 1)
+})
