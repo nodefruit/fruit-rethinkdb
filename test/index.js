@@ -43,3 +43,11 @@ test('List all data from an specific table', async t => {
 
   t.is(typeof result, 'object', 'Result is an object')
 })
+
+test('Count data in a table', async t => {
+  let table = 'users'
+
+  let result = await adapter.count(table)
+
+  t.is(typeof result, 'number', 'Result is a number')
+})
