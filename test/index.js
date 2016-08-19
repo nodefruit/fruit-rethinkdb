@@ -5,7 +5,7 @@ const adapter = new Adapter({host: process.env.HOST, port: process.env.PORT, db:
 
 test('Connect to the database', async t => {
   let connection = await adapter.connect()
-  t.deepEqual(connection.host, config.db.host)
+  t.deepEqual(connection.host, adapter.host)
 })
 
 test('Insert data into an specific table', async t => {
