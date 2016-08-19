@@ -20,9 +20,9 @@ dependencies:
 test:
   pre:
     - npm install -g recli
-    - recli 'r.dbCreate('test2')'
-    - recli 'r.db('test2').tableCreate('users')'
-    - recli 'r.db('test2').tableCreate('users2')'
+    - recli 'r.dbCreate("test2")'
+    - recli 'r.db("test2").tableCreate("users")'
+    - recli 'r.db("test2").tableCreate("users2")'
     - npm install
   override:
     - npm test
